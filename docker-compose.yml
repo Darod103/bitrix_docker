@@ -1,7 +1,7 @@
 services:
   # Сервис базы данных
   db:
-    image: dockerhub.timeweb.cloud/mariadb:10.11
+    image: mariadb:10.11
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -27,7 +27,7 @@ services:
 
 
   nginx:
-    image: dockerhub.timeweb.cloud/nginx:1.24
+    image: nginx:1.24
     restart: always
     ports:
       - "80:80"
